@@ -234,9 +234,14 @@ export function Home() {
               {links?.map((link) => (
                 <div key={link.id} className="flex items-center justify-between py-4 border-b border-grayscale-100 last:border-0 group">
                   <div className="flex flex-col gap-1 overflow-hidden pr-4">
-                    <span className="text-md font-bold text-blue-base">
+                    <a 
+                      href={`${window.location.origin}/${link.shortCode}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-md font-bold text-blue-base hover:text-blue-dark transition-colors cursor-pointer"
+                    >
                       {window.location.origin}/{link.shortCode}
-                    </span>
+                    </a>
                     <span className="text-sm text-grayscale-400 truncate max-w-[200px] sm:max-w-[300px]">
                       {link.originalUrl}
                     </span>
