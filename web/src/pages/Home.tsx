@@ -221,7 +221,6 @@ export function Home() {
               Carregando links...
             </div>
           ) : links?.length === 0 ? (
-            {/* Estado vazio da lista. */}
             <div className="flex-1 flex flex-col items-center justify-center text-center">
               <div className="text-grayscale-400 mb-4 opacity-50">
                 <LinkIcon size={48} weight="thin" />
